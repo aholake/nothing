@@ -14,10 +14,21 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "release": "generate-release"
   },
   "eslintConfig": {
     "extends": "react-app"
+  },
+  "config": {
+    "generateRelease": {
+      "no_confirm": true,
+      "skip_finish": true,
+      "skip_git_push": true,
+      "post_commit_commands": [
+        "git push origin HEAD"
+      ]
+    }
   },
   "browserslist": {
     "production": [
